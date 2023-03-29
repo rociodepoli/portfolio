@@ -1,0 +1,67 @@
+
+  /* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap'); */
+
+.container{
+    /* height: 90%; */
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-content: center;
+    align-items: center;
+}
+.text{
+  font-size: 1.6em;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    display: flex;
+    /* font-size: x-large; */
+    justify-content: center;
+    align-items: baseline;
+}
+.hi{
+margin-right: 5px;
+}
+.rocio{
+font-family: 'Dancing Script', 'sans-serif';
+margin-left: 20px;
+color:rgb(255 211 195);
+font-size: 2em;
+text-shadow: 0px 3px 0px black;
+}
+.typewriter{
+  display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+.typewriter h3 {
+  width: fit-content;
+  text-align: start;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(255, 255, 255);
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(30,end) forwards, blink-caret 1s step-end infinite;
+ animation-delay: 2s;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255) }
+}
+.text span{
+  /* font-size: larger; */
+    background-color: rgba(71, 61, 139, 0.5);
+    border-radius: 5px;
+    padding: 1%;
+}

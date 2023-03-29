@@ -1,0 +1,46 @@
+.star {
+    position: relative;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: -1;
+    transform: rotate(45deg);
+  }
+  
+  /* .star:before,
+  .star:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4%;
+    height: 8px;
+    background-color: white;
+  }
+  
+  .star:before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+  .star:after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  } */
+.star2{
+    position: relative;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+.star3{
+    position: relative;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: -1;
+    transform: rotate(45deg); 
+}

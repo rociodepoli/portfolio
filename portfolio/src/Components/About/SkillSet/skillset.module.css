@@ -1,0 +1,26 @@
+.container{
+    margin: 5%;
+}
+.containerAllIcons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(71, 61, 139, 0.5);
+    padding: 2rem;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.iconContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.iconContainer p {
+    margin: 0;
+}
