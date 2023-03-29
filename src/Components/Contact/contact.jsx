@@ -27,7 +27,7 @@ export default function Contact(){
     return (
         <div className={styles.container}>
         <form
-          netlify
+          data-netlify='true'
           name="contact"
           onSubmit={(e)=> handleSubmit(e)}
           >
