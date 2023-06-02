@@ -1,8 +1,8 @@
-import React from "react";
-import styles from './contact.module.css';
+import React, {useEffect} from "react";
+import styles from "./contact.module.css";
 
-export default function Contact(){
-    const [name, setName] = React.useState("");
+export default function Contact() {
+  const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
 
@@ -14,6 +14,26 @@ export default function Contact(){
       .join("&");
   }
 
+  const handleChange = (e) => {
+    setMessage(e.target.value);
+  };
+
+  useEffect(() => {
+    adjustTextareaHeight();
+  }, [message]);
+  
+  const adjustTextareaHeight = () => {
+    const textarea = document.getElementById("message");
+    textarea.style.height = "auto";
+    textarea.style.height = `${textarea.scrollHeight}px`;
+
+    if (textarea.scrollHeight > textarea.offsetHeight) {
+      textarea.style.overflowY = "auto";
+    } else {
+      textarea.style.overflowY = "hidden";
+    }
+  };
+
   function handleSubmit(e) {
     e.preventDefault();
     fetch("/", {
@@ -24,58 +44,56 @@ export default function Contact(){
       .then(() => alert("Message sent!"))
       .catch((error) => alert(error));
   }
-    return (
-        <div className={styles.container}>
-        <form
-          data-netlify='true'
-          name="contact"
-          onSubmit={(e)=> handleSubmit(e)}
-          >
-          <h2 >
-            ¡Contrátame!
-          </h2>
-          <p >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
-            suscipit officia aspernatur veritatis. Asperiores, aliquid?
-          </p>
-          <div >
-            <label htmlFor="name" >
-              Nombre
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              onChange={(e)=>setName(e.target.value)}
-            />
+  return (
+    <div className={styles.container}>
+      <form
+        data-netlify="true"
+        name="contact"
+        onSubmit={(e) => handleSubmit(e)}
+      >
+        <h2>Want more info?</h2>
+        <div className={styles.sections}>
+          <div className={styles.text} >
+          <p>
+            If you found my profile interesting, you can send me a message to
+            ask me anything you need or just to say hi. I would be delighted to
+            respond.
+          </p></div>
+          <div className={styles.form}>
+            <div className={styles.formdiv}>
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className={styles.input}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div className={styles.formdiv}>
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                className={styles.input}
+                name="email"
+                onChange={(e) => handleChange(e)}
+              />
+            </div>
+            <div className={styles.formdiv}>
+              <label htmlFor="message"> Message</label>
+              <textarea
+                id="message"
+                className={styles.textarea}
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+            </div>
+            <button type="submit">Send!</button>
           </div>
-          <div >
-            <label htmlFor="email"  >
-              Correo electrónico
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              onChange={(e)=>setEmail(e.target.value)}
-            />
-          </div>
-          <div >
-            <label
-              htmlFor="message"
->              Mensaje
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              onChange={(e)=>setMessage(e.target.value)}
-            />
-          </div>
-          <button
-            type="submit">
-            Enviar
-          </button>
-        </form>
         </div>
-    )
+      </form>
+    </div>
+  );
 }
