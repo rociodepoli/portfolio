@@ -5,9 +5,9 @@ export default function Background() {
   return (
     <div
       style={{
-        position: "absolute",
+        position: "fixed",
         width: "100%",
-        height: "100%",
+        height: "100vh",
         display: "grid",
         gridTemplateColumns: "2fr 3fr 2fr 3fr 2fr 1fr",
         //gridTemplateRows: "repeat(30, 1fr)",

@@ -1,5 +1,6 @@
 .container{
     margin: 10% 0%;
+    /* width: 100%; */
 }
 .sections{
     display: flex;
@@ -14,13 +15,24 @@
     border-radius: 5px;
     padding: 1%;
 }
-.form{
+/* .form{
     flex: 2;
     display: flex;
     gap: 6px;
     margin-top: 10px;
     flex-direction: column;
     align-items: flex-end;
+} */
+.form{
+  flex: 2;
+  display: grid;
+    gap: 6px;
+    margin-top: 10px;
+    /* flex-direction: column; */
+    width: 100%;
+    justify-items: end;
+    justify-content: center;
+    align-items: center;
 }
 .formdiv{
     display: flex;
@@ -31,14 +43,33 @@
 .input{
     width: 300px;
     margin-left: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.384);
 }
 .textarea{
+  border-radius: 5px;
     width: 300px;
     height: auto;
     margin-left: 10px;
     resize:none;
   min-height: 70px; 
   max-height: 160px;
+  background-color: rgba(255, 255, 255, 0.384);
+
+}
+.send{
+  border-radius: 5px;
+ background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+.send:hover {
+  background: url('https://thumbs.gfycat.com/DimwittedScarceDutchsmoushond-max-1mb.gif') center center no-repeat;
+  cursor: pointer;
+  /* color: #7e1919da;
+  border: 1px solid #e0dcdcda */
 }
 @media (max-width: 768px) {
     .sections {
@@ -47,6 +78,14 @@
     }
   }
 @media (max-width: 425px) {
+  .form{
+    flex: 2;
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: flex-end;
+}
     .formdiv {
       flex-direction: column;
       align-items: flex-start;

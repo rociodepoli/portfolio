@@ -90,7 +90,7 @@ export default function Contact() {
                 onChange={(e) => setMessage(e.target.value)}
               />
             </div>
-            <button type="submit">Send!</button>
+            <button type="submit" className={styles.send}>Send!</button>
           </div>
         </div>
       </form>

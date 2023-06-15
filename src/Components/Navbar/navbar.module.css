@@ -67,10 +67,12 @@
     transition: transform 0.3s ease-out;
   }
    .link:hover {
-    background-color: #050404;
+    /* background-color: #050404; */
     transform:  scale(1.1);
+    background:  url('https://thumbs.gfycat.com/DimwittedScarceDutchsmoushond-max-1mb.gif') center center no-repeat;
     border: none;
     cursor: pointer;
+    color: white;
   }
   .link:hover::after{
       transform: translate(-50%, -50%) scale(2);
@@ -88,8 +90,8 @@
     transition: width 0.3s ease-out;
   }
  .active{
-  background-color:rgba(72, 3, 99, 0.664) ;
-  color:rgb(127, 80, 255) ;
+  background-color: rgba(208, 198, 253, 0.74);
+  color:rgb(20, 20, 20) ;
  }
  .image{
   max-width: 60px;
