@@ -9,6 +9,13 @@ export default function About() {
         A little about <strong style={{ color: "burlywood" }}>me</strong>
       </h1>
       <div className={styles.about}>
+         <div>
+          <img
+          className={styles.img}
+            src="https://res.cloudinary.com/dcvopyrah/image/upload/v1687982256/porfolio/WhatsApp_Image_2023-06-28_at_16.57.00_lmteyl.jpg"
+            alt="me"
+          />
+        </div>
         <div className={styles.paragraph}>
           <p>
             After a little over a year of living abroad, I have opened myself up
@@ -30,12 +37,7 @@ export default function About() {
             high-quality results.
           </p>
         </div>
-        <div>
-          <img
-            src="https://avatars.githubusercontent.com/u/107082652?v=4"
-            alt="me"
-          />
-        </div>
+       
       </div>
       <Stack />
     </div>

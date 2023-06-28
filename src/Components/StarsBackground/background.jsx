@@ -8,6 +8,7 @@ export default function Background() {
         position: "fixed",
         width: "100%",
         height: "100vh",
+        zIndex: "-1",
         display: "grid",
         gridTemplateColumns: "2fr 3fr 2fr 3fr 2fr 1fr",
         //gridTemplateRows: "repeat(30, 1fr)",

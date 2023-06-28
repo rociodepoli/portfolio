@@ -15,9 +15,12 @@ export default function Home() {
         </div>
         <span>Welcome to my Portfolio!</span>
       </div>
-      <div style={{overflow:'hidden'}}>
+      <div 
+      //style={{overflow:'hidden'}}
+      >
         <img
-          src="https://res.cloudinary.com/dcvopyrah/image/upload/v1679438550/imagen_2023-03-21_193003038_1_Traced_bkjwlp.svg"
+        className={styles.img}
+          src="https://res.cloudinary.com/dcvopyrah/image/upload/v1687980703/porfolio/WhatsApp_Image_2023-06-28_at_16.24.55_x7pc8z.jpg"
           alt="m"
         />
       </div>

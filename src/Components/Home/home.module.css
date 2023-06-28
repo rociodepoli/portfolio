@@ -7,9 +7,10 @@
     margin-top: 0%;
     margin-bottom: 0%;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 4fr 3fr;
     align-content: center;
     align-items: center;
+    padding: 0% 20px;
 }
 .text{
   font-size: 1.6em;
@@ -23,6 +24,10 @@
     /* font-size: x-large; */
     justify-content: center;
     align-items: baseline;
+}
+.img{
+  border-radius: 50%;
+  max-width: 450px;
 }
 .hi{
 margin-right: 5px;
