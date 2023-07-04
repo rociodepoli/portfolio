@@ -1,5 +1,6 @@
 .container{
     margin: 10% 0%;
+    font-size: 1.3em;
     /* width: 100%; */
 }
 .sections{
@@ -42,17 +43,18 @@
 }
 .input{
     width: 300px;
+    height: 30px;
     margin-left: 10px;
-    border-radius: 5px;
+    border-radius: 6px 0px 6px 6px;
     background-color: rgba(255, 255, 255, 0.384);
 }
 .textarea{
-  border-radius: 5px;
-    width: 300px;
+  border-radius: 6px 0px 6px 6px;
+    width: 298px;
     height: auto;
     margin-left: 10px;
     resize:none;
-  min-height: 70px; 
+  min-height: 80px; 
   max-height: 160px;
   background-color: rgba(255, 255, 255, 0.384);
 

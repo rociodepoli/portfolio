@@ -1,12 +1,22 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import styles from "./contact.module.css";
+import validateForm from './validator.js'
+import Swal from 'sweetalert2'
+
 
 export default function Contact() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
+
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+  const [errors, setErrors] = useState({
+    initial: "Fill in all the fields"
+  })
 
   function encode(data) {
+    console.log(data)
     return Object.keys(data)
       .map(
         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
@@ -15,12 +25,20 @@ export default function Contact() {
   }
 
   const handleChange = (e) => {
-    setMessage(e.target.value);
+    setErrors(
+      validateForm[e.target.name]({
+        ...errors,
+        [e.target.name]: e.target.value,
+      })
+  
+    );
+ 
+    setForm({...form, [e.target.name]: e.target.value});
   };
 
   useEffect(() => {
     adjustTextareaHeight();
-  }, [message]);
+  }, [form.message]);
   
   const adjustTextareaHeight = () => {
     const textarea = document.getElementById("message");
@@ -36,13 +54,24 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/", {
+    if( !Object.keys(errors).at(0)){
+      fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
+      body: encode({ "form-name": "contact", name: form.name, email: form.email, message:form.message }),
     })
-      .then(() => alert("Message sent!"))
-      .catch((error) => alert(error));
+      .then((response) => console.log(response))
+      //.catch((error) => alert(error));
+    } else{
+      Swal.fire({
+        title: 'Error!',
+        text: Object.values(errors)[0],
+        icon: 'error',
+        confirmButtonText: 'OK'
+      })
+      //alert(Object.values(errors)[0])
+    }
+    
   }
   return (
     <div className={styles.container}>
@@ -51,7 +80,7 @@ export default function Contact() {
         name="contact"
         onSubmit={(e) => handleSubmit(e)}
       >
-        <h2>Want more info?</h2>
+        <h1>Want more <strong style={{ color: "burlywood" }}>info</strong>?</h1>
         <div className={styles.sections}>
           <div className={styles.text} >
           <p>
@@ -66,8 +95,9 @@ export default function Contact() {
                 type="text"
                 id="name"
                 name="name"
+                value={form.name}
                 className={styles.input}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => handleChange(e)}
               />
             </div>
             <div className={styles.formdiv}>
@@ -77,6 +107,7 @@ export default function Contact() {
                 id="email"
                 className={styles.input}
                 name="email"
+                value={form.email}
                 onChange={(e) => handleChange(e)}
               />
             </div>
@@ -86,8 +117,8 @@ export default function Contact() {
                 id="message"
                 className={styles.textarea}
                 name="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                value={form.message}
+                onChange={(e) => handleChange(e)}
               />
             </div>
             <button type="submit" className={styles.send}>Send!</button>

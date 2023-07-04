@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 export default function Work() {
   return (
     <div className={styles.container}>
-      <h1>My Projects</h1>
+      <h1>My <strong style={{ color: "burlywood" }}>projects</strong></h1>
       <div className={styles.projects}>
         {projects?.map((project) => (
           <ProjectCard
@@ -18,7 +18,7 @@ export default function Work() {
           />
         ))}
       </div>
-      {console.log(projects)}
+      {/* {console.log(projects)} */}
     </div>
   );
 }
