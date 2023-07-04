@@ -60,8 +60,21 @@ export default function Contact() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", name: form.name, email: form.email, message:form.message }),
     })
-      .then((response) => console.log(response))
-      //.catch((error) => alert(error));
+      .then(() => 
+      Swal.fire({
+        title: 'Message sent!',
+        text: "Thank you for your time, I'll be in touch ASAP",
+        icon: 'success',
+        timer: 5000,
+  timerProgressBar: true,
+      }))
+      .catch((error) => 
+      Swal.fire({
+        title: 'Error!',
+        text: error,
+        icon: 'error',
+        confirmButtonText: 'OK'
+      }));
     } else{
       Swal.fire({
         title: 'Error!',
@@ -69,7 +82,6 @@ export default function Contact() {
         icon: 'error',
         confirmButtonText: 'OK'
       })
-      //alert(Object.values(errors)[0])
     }
     
   }
