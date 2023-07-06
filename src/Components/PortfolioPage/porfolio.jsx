@@ -9,7 +9,7 @@ export default function PortfolioPage() {
   return (
     <div className={styles.container}>
 <Background></Background>
-      <section id="home" className={styles.section}>
+      <section id="home" className={styles.section1}>
         <Home></Home>
       </section>
       <section id="about" className={styles.section}>

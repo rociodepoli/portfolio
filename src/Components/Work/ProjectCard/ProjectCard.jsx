@@ -3,7 +3,7 @@ import style from "./ProjectCard.module.css";
 
 export default function ProjectCard(props) {
   return (
-    <div className={style.column}>
+    // <div className={style.column}>
       <div className={style.container}>
         <img className={style.image} src={props.image} alt={props.name} />
         <h3>{props.name}</h3>
@@ -40,6 +40,6 @@ export default function ProjectCard(props) {
           )}
         </div>
       </div>
-    </div>
+   // </div>
   );
 }
