@@ -33,8 +33,9 @@
    position: fixed;
    top: 0;
    left: 0;
+   right: 0;
    width: 100%;
-   padding: 10px;
+   padding: 10px 0px;
    color: aliceblue;
    }
    .div{
@@ -113,7 +114,9 @@ display: flex;
 justify-content: center;
 align-items: center;
  }
+
 @media screen and  (max-width: 426px) {
+ 
   .div{
     display: flex;
     flex-direction: column;
@@ -121,17 +124,33 @@ align-items: center;
     align-items: flex-start;
     position: fixed;
     top: 80px;
-    right: 0px;
-    width: 300px;
+    right: -10px;
+    width: 0px;
     height: 100vh;
     background: #000000d3;
     padding: 40px 0 0 10px;
+    transition: 0.3s ease-in-out;
+  }
+  .divActive{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    top: 80px;
+    right: 0px;
+    width: 150px;
+    height: 200px;
+    background: #000000d3;
+    padding: 40px 0 0 10px;
+    transition: 0.3s ease-in-out;
   }
   .link{
     margin-bottom: 25px;
   }
   .mobile{
     display: block;
+    margin-right: 5px;
   }
   .mobile svg{
     cursor: pointer;

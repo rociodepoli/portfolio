@@ -1,19 +1,25 @@
-import React, { createRef, useState } from "react";
+import React, { createRef, useEffect, useState } from "react";
 
 import { Link } from "react-scroll";
 import styles from "./navbar.module.css";
 
 export default function Navbar(props) {
   const [clicked, setClicked] = useState(false);
+  
+  useEffect(()=>{
+    if(window.screen.width > 426) setClicked(false) 
+  console.log(clicked)
+},[window.screen.width])
+
   return (
     <nav className={styles.container}>
       <div className={styles.image}>
         <img
           src="https://res.cloudinary.com/dcvopyrah/image/upload/v1679438550/imagen_2023-03-21_193003038_1_Traced_bkjwlp.svg"
-          alt="astronaut"
+          alt=""
         />
       </div>
-      <div className={styles.div}>
+      <div className={clicked && window.screen.width < 427 ? styles.divActive : styles.div}>
         <Link
           className={styles.link}
           activeClass={styles.active}
@@ -59,6 +65,7 @@ export default function Navbar(props) {
           Contact
         </Link>
       </div>
+      {window.screen.width < 427 && 
       <div className={styles.mobile} onClick={()=> setClicked(!clicked)}>
         {clicked ? (
           <svg
@@ -86,6 +93,7 @@ export default function Navbar(props) {
           </svg>
         )}
       </div>
+      }
     </nav>
   );
 }
