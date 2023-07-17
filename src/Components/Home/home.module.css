@@ -27,7 +27,7 @@
 }
 .img{
   border-radius: 50%;
-  max-width: 450px;
+  max-width: 400px;
 }
 .hi{
 margin-right: 5px;
@@ -90,5 +90,7 @@ max-width: 350px;
   
 }
 @media (max-width: 425px) {
-
+  .img{
+    max-width: 250px;
+    }
 }

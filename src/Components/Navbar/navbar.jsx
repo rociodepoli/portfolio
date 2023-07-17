@@ -15,7 +15,7 @@ export default function Navbar(props) {
     <nav className={styles.container}>
       <div className={styles.image}>
         <img
-          src="https://res.cloudinary.com/dcvopyrah/image/upload/v1679438550/imagen_2023-03-21_193003038_1_Traced_bkjwlp.svg"
+          src="https://res.cloudinary.com/dcvopyrah/image/upload/v1679438550/porfolio/imagen_2023-03-21_193003038_1_Traced_bkjwlp.svg"
           alt=""
         />
       </div>
