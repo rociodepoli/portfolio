@@ -14,10 +14,18 @@ export default function Navbar(props) {
   return (
     <nav className={styles.container}>
       <div className={styles.image}>
+      <Link
+          spy={true}
+          smooth={true}
+          offset={-80}
+          to="home"
+          isDynamic={true}
+        >
         <img
           src="https://res.cloudinary.com/dcvopyrah/image/upload/v1679438550/porfolio/imagen_2023-03-21_193003038_1_Traced_bkjwlp.svg"
           alt=""
         />
+        </Link>
       </div>
       <div className={clicked && window.screen.width < 427 ? styles.divActive : styles.div}>
         <Link
