@@ -15,34 +15,34 @@ const projects=[
         github: 'https://github.com/rociodepoli/PI-Food/tree/main/PI-Food-main',
         deploy:'none'
     },
-    {
-        name: 'sfgs',
-        image: foodpi,
-        description:'Designed and developed a food recipe application that included search, filters, ordering, and creation features.',
-        github: 'https://github.com/rociodepoli/PI-Food/tree/main/PI-Food-main',
-        deploy:'none'
-    },
-    {
-        name: 'sdgfsdgsd',
-        image: foodpi,
-        description:'Designed and developed a food recipe application that included search, filters, ordering, and creation features.',
-        github: 'https://github.com/rociodepoli/PI-Food/tree/main/PI-Food-main',
-        deploy:'none'
-    },
-    {
-        name: 'sgsghrr',
-        image: foodpi,
-        description:'Designed and developed a food recipe application that included search, filters, ordering, and creation features.',
-        github: 'https://github.com/rociodepoli/PI-Food/tree/main/PI-Food-main',
-        deploy:'none'
-    },
-    {
-        name: 'gggggggggg',
-        image: foodpi,
-        description:'Designed and developed a food recipe application that included search, filters, ordering, and creation features.',
-        github: 'https://github.com/rociodepoli/PI-Food/tree/main/PI-Food-main',
-        deploy:'none'
-    }
+    // {
+    //     name: 'sfgs',
+    //     image: foodpi,
+    //     description:'Designed and developed a food recipe application that included search, filters, ordering, and creation features.',
+    //     github: 'https://github.com/rociodepoli/PI-Food/tree/main/PI-Food-main',
+    //     deploy:'none'
+    // },
+    // {
+    //     name: 'sdgfsdgsd',
+    //     image: foodpi,
+    //     description:'Designed and developed a food recipe application that included search, filters, ordering, and creation features.',
+    //     github: 'https://github.com/rociodepoli/PI-Food/tree/main/PI-Food-main',
+    //     deploy:'none'
+    // },
+    // {
+    //     name: 'sgsghrr',
+    //     image: foodpi,
+    //     description:'Designed and developed a food recipe application that included search, filters, ordering, and creation features.',
+    //     github: 'https://github.com/rociodepoli/PI-Food/tree/main/PI-Food-main',
+    //     deploy:'none'
+    // },
+    // {
+    //     name: 'gggggggggg',
+    //     image: foodpi,
+    //     description:'Designed and developed a food recipe application that included search, filters, ordering, and creation features.',
+    //     github: 'https://github.com/rociodepoli/PI-Food/tree/main/PI-Food-main',
+    //     deploy:'none'
+    // }
 ]
 
 export default projects
